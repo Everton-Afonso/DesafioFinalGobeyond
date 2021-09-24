@@ -7,9 +7,7 @@ function Header() {
 
   return (
     <header className="container-header">
-      <figure>
-        <img src="assets/logo.svg" alt="Logo Corebiz" />
-      </figure>
+      <img src="assets/logo.svg" alt="Logo Corebiz" />
 
       <nav className="container-links">
         <ul
@@ -59,7 +57,7 @@ function Header() {
           onClick={() => setIsMobile(!isMobile)}
         >
           <img
-            src={isMobile ? "assets/times.svg" : "assets/bars.svg"}
+            src={isMobile ? "assets/times.svg": "assets/bars.svg"}
             alt="icons menu"
           />
         </button>
