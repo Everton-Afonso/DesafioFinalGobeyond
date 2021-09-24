@@ -54,7 +54,7 @@ function Header() {
           </li>
         </ul>
 
-        <figure
+        <button
           className="mobile-menu-icon"
           onClick={() => setIsMobile(!isMobile)}
         >
@@ -62,7 +62,7 @@ function Header() {
             src={isMobile ? "assets/times.svg" : "assets/bars.svg"}
             alt="icons menu"
           />
-        </figure>
+        </button>
       </nav>
     </header>
   );
