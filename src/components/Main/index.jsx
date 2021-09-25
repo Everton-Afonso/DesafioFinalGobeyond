@@ -31,6 +31,12 @@ function Main() {
           </a>
         </section>
 
+        <section className="model">
+          <div>
+            <img src={album[post]?.url} alt="imagens do model" />
+          </div>
+        </section>
+
         <section className="model-mini">
           <div>
             {album.map((itens, index) => (
@@ -41,12 +47,6 @@ function Main() {
                 alt="imagens do mini model"
               />
             ))}
-          </div>
-        </section>
-
-        <section className="model">
-          <div>
-            <img src={album[post]?.url} alt="imagens do model" />
           </div>
         </section>
       </section>
