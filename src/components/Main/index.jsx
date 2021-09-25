@@ -10,7 +10,7 @@ function Main() {
 
   useEffect(() => {
     api
-      .get("Everton-Afonso/db/album")
+      .get("photos?_limit=4")
       .then((response) => setAlbum(response.data))
       .catch((error) => {
         alert(`Ops! ocorreu um erro: ${error}`);
