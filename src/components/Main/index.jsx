@@ -39,18 +39,19 @@ function Main() {
           </div>
         </section> */}
 
-        {/* <section className="model-mini">
+        <section className="model-mini">
           <div>
             {album.map((itens, index) => (
-              <img
-                key={index}
-                onClick={() => setPost(index)}
-                src={itens.thumbnailUrl}
-                alt="imagens do mini model"
-              />
+              // <img
+              //   key={index}
+              //   onClick={() => setPost(index)}
+              //   src={itens.thumbnailUrl}
+              //   alt="imagens do mini model"
+              // />
+              <p key={index} >{itens.title}</p>
             ))}
           </div>
-        </section> */}
+        </section>
       </section>
     </main>
   );
