@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 
+import api from "../../services/api";
+
 import "./styles.css";
 
 function Main() {
@@ -7,9 +9,9 @@ function Main() {
   const [post, setPost] = useState(0);
 
   useEffect(() => {
-    fetch("https://my-json-server.typicode.com/Everton-Afonso/db/album")
-      .then((res) => res.json())
-      .then((res) => setAlbum(res))
+    api
+      .get("Everton-Afonso/db/album")
+      .then((response) => setAlbum(response.data))
       .catch((error) => {
         alert(`Ops! ocorreu um erro: ${error}`);
       });
