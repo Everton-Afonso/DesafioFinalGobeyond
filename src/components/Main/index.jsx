@@ -19,7 +19,7 @@ function Main() {
     <main className="main-conteiner">
       <section className="main-content">
         <section className="main-text">
-          <h3>{album[post]?.title}</h3>
+          <h2>{album[post]?.title}</h2>
           <a
             href="https://www.corebiz.ag/pt/"
             target="_blank"
