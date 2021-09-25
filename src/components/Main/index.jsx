@@ -9,7 +9,12 @@ function Main() {
   const [post, setPost] = useState(0);
 
   useEffect(() => {
-    api.get("album").then((response) => setAlbum(response.data));
+    api
+      .get("album")
+      .then((response) => setAlbum(response.data))
+      .catch((error) => {
+        alert(`Ops! ocorreu um erro: ${error}`);
+      });
   }, []);
 
   return (
@@ -38,7 +43,7 @@ function Main() {
                 key={index}
                 onClick={() => setPost(itens.id)}
                 src={itens.thumbnailUrl}
-                alt={itens.title}
+                alt="imagens do mini model"
               />
             ))}
           </div>
@@ -46,7 +51,7 @@ function Main() {
 
         <section className="model">
           <div>
-            <img src={album[post]?.url} alt={album[post]?.title} />
+            <img src={album[post]?.url} alt="imagens do model" />
           </div>
         </section>
       </section>
