@@ -21,7 +21,7 @@ function Main() {
     <main className="main-conteiner">
       <section className="main-content">
         <section className="main-text">
-          <h1>{album[post]?.title}</h1>
+          {/* <h1>{album[post]?.title}</h1> */}
           <a
             href="https://www.corebiz.ag/pt/"
             target="_blank"
@@ -35,14 +35,14 @@ function Main() {
 
         <section className="model-mini">
           <div>
-            {/* {album.map((itens, index) => (
+            {album.map((itens, index) => (
               <img
                 key={index}
                 onClick={() => setPost(itens.id)}
                 src={itens.thumbnailUrl}
                 alt="imagens do mini model"
               />
-            ))} */}
+            ))}
           </div>
         </section>
 
