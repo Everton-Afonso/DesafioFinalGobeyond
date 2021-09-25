@@ -33,11 +33,11 @@ function Main() {
           </a>
         </section>
 
-        <section className="model">
+        {/* <section className="model">
           <div>
             <img src={album[post]?.url} alt="imagens do model" />
           </div>
-        </section>
+        </section> */}
 
         <section className="model-mini">
           <div>
