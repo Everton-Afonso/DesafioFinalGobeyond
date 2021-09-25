@@ -37,7 +37,7 @@ function Main() {
         </section>
 
         <section className="model-mini">
-          <figure>
+          <div>
             {album.map((itens, index) => (
               <img
                 key={index}
@@ -46,13 +46,13 @@ function Main() {
                 alt="imagens do mini model"
               />
             ))}
-          </figure>
+          </div>
         </section>
 
         <section className="model">
-          <figure>
+          <div>
             <img src={album[post]?.url} alt="imagens do model" />
-          </figure>
+          </div>
         </section>
       </section>
     </main>
