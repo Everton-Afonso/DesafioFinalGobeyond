@@ -27,10 +27,10 @@
 .footer-logo p {
   font-size: 13px;
   font-weight: 600;
-  padding-top: 5px;
+  padding-top: 10px;
 }
 .contacts {
-  margin-top: 50px;
+  margin-top: 45px;
 }
 .contacts a {
   margin-right: 16px;
@@ -44,7 +44,7 @@
 .footer-links a {
   text-decoration: none;
   color: #000;
-  font-size: 13px;
+  font-size: 14px;
   cursor: pointer;
   font-weight: 600;
 }
@@ -68,4 +68,43 @@
   font-size: 12px;
   font-weight: 500;
   padding-bottom: 10px;
+}
+@media screen and (max-width: 1024px) {
+  .footer:before {
+    top: 52%;
+    left: 0;
+  }
+  .footer-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .footer-countries {
+    grid-template-columns: 1fr;
+  }
+  .footer-contacts,
+  .footer-logo,
+  .footer-menu {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .footer-links {
+    margin-top: -1rem;
+    width: 100%;
+  }
+  .footer-links li{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .footer-countries {
+    display:flex;
+    justify-content: flex-start;
+  }
+}
+@media screen and (max-width: 425px) {
+  .footer:before {
+    top: 48%;
+    left: 0;
+  }
 }
