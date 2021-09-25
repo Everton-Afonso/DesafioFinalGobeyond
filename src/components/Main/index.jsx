@@ -39,7 +39,7 @@ function Main() {
           </div>
         </section> */}
 
-        <section className="model-mini">
+        {/* <section className="model-mini">
           <div>
             {album.map((itens, index) => (
               <img
@@ -50,7 +50,7 @@ function Main() {
               />
             ))}
           </div>
-        </section>
+        </section> */}
       </section>
     </main>
   );
