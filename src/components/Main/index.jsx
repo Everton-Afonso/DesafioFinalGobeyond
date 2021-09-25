@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import axios from "axios";
+import api from "../../services/api";
 
 import "./styles.css";
 
@@ -9,12 +9,7 @@ function Main() {
   const [post, setPost] = useState(0);
 
   useEffect(() => {
-    axios
-      .get("https://my-json-server.typicode.com/Everton-Afonso/db/album")
-      .then((response) => setAlbum(response.data))
-      .catch((error) => {
-        alert(`Ops! ocorreu um erro: ${error}`);
-      });
+    api.get("album").then((response) => setAlbum(response.data));
   }, []);
 
   return (
