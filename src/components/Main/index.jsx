@@ -7,7 +7,6 @@ import "./styles.css";
 function Main() {
   const [album, setAlbum] = useState([]);
   const [post, setPost] = useState(0);
-  const title = album[post]?.title;
 
   useEffect(() => {
     api
@@ -22,7 +21,7 @@ function Main() {
     <main className="main-conteiner">
       <section className="main-content">
         <section className="main-text">
-          <h1>{title}</h1>
+          <h1>{album[post]?.title}</h1>
           <a
             href="https://www.corebiz.ag/pt/"
             target="_blank"
@@ -34,7 +33,7 @@ function Main() {
           </a>
         </section>
 
-        <section className="model-mini">
+        {/* <section className="model-mini">
           <div>
             {album.map((itens, index) => (
               <img
@@ -45,7 +44,7 @@ function Main() {
               />
             ))}
           </div>
-        </section>
+        </section> */}
 
         <section className="model">
           <div>
