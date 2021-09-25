@@ -1,18 +1,17 @@
-import React, { useEffect, useState, createContext } from "react";
+import React, { useEffect, useState } from "react";
 
 import api from "../../services/api";
 
 import "./styles.css";
 
-export const userContext = createContext();
-
 function Main() {
   const [album, setAlbum] = useState([]);
   const [post, setPost] = useState(0);
+  const userGitHub = "Everton-Afonso/db/album";
 
   useEffect(() => {
     api
-      .get("Everton-Afonso/db/album")
+      .get(`${userGitHub}`)
       .then((response) => setAlbum(response.data))
       .catch((error) => {
         alert(`Ops! ocorreu um erro: ${error}`);
@@ -22,7 +21,11 @@ function Main() {
   return (
     <main className="main-conteiner">
       <section className="main-content">
-        <section className="main-text">
+        <section
+          className={`title-main ${
+            album[post]?.id === post ? "active" : "inactive"
+          }`}
+        >
           <h2>{album[post]?.title}</h2>
           <a
             href="https://www.corebiz.ag/pt/"
@@ -37,22 +40,26 @@ function Main() {
 
         <section className="model">
           <div>
-            <img src={album[post]?.url} alt="imagens do model" />
+            <img
+              className={`button-main ${
+                album[post]?.id === post ? "active" : "inactive"
+              }`}
+              src={album[post]?.url}
+              alt={album[post]?.title}
+            />
           </div>
         </section>
 
         <section className="model-mini">
           <div>
-            <userContext.Provider value={[album, setAlbum]}>
-              {album.map((itens, index) => (
-                <img
-                  key={index}
-                  onClick={() => setPost(index)}
-                  src={itens.thumbnailUrl}
-                  alt="imagens do mini model"
-                />
-              ))}
-            </userContext.Provider>
+            {album.map((itens, index) => (
+              <img
+                key={index}
+                onClick={() => setPost(index)}
+                src={itens.thumbnailUrl}
+                alt="imagens do mini model"
+              />
+            ))}
           </div>
         </section>
       </section>
