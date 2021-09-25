@@ -21,18 +21,18 @@ function Main() {
             </a>
           </div>
 
-          <figure className="model-mini">
+          <section className="model-mini">
             <div>
               <img src="assets/banner.jpg" alt="teste" />
             </div>
-          </figure>
+          </section>
         </section>
 
-        <figure className="model">
+        <section className="model">
           <div>
             <img src="assets/banner.jpg" alt="teste" />
           </div>
-        </figure>
+        </section>
       </section>
     </main>
   );
