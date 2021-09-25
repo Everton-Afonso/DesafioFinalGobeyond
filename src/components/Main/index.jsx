@@ -7,11 +7,10 @@ import "./styles.css";
 function Main() {
   const [album, setAlbum] = useState([]);
   const [post, setPost] = useState(0);
-  const userGitHub = "Everton-Afonso/db/album";
 
   useEffect(() => {
     api
-      .get(`${userGitHub}`)
+      .get("Everton-Afonso/db/album")
       .then((response) => setAlbum(response.data))
       .catch((error) => {
         alert(`Ops! ocorreu um erro: ${error}`);
@@ -21,11 +20,7 @@ function Main() {
   return (
     <main className="main-conteiner">
       <section className="main-content">
-        <section
-          className={`title-main ${
-            album[post]?.id === post ? "active" : "inactive"
-          }`}
-        >
+        <section className="main-text">
           <h2>{album[post]?.title}</h2>
           <a
             href="https://www.corebiz.ag/pt/"
@@ -40,13 +35,7 @@ function Main() {
 
         <section className="model">
           <div>
-            <img
-              className={`button-main ${
-                album[post]?.id === post ? "active" : "inactive"
-              }`}
-              src={album[post]?.url}
-              alt={album[post]?.title}
-            />
+            <img src={album[post]?.url} alt="imagens do model" />
           </div>
         </section>
 
