@@ -48,12 +48,6 @@ function Main() {
             ))}
           </div>
         </section>
-
-        <section className="model">
-          <div>
-            <img src={album[post]?.url} alt="imagens do model" />
-          </div>
-        </section>
       </section>
     </main>
   );
