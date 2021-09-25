@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, createContext } from "react";
 
 import api from "../../services/api";
 
 import "./styles.css";
+
+export const userContext = createContext();
 
 function Main() {
   const [album, setAlbum] = useState([]);
@@ -41,14 +43,16 @@ function Main() {
 
         <section className="model-mini">
           <div>
-            {album.map((itens, index) => (
-              <img
-                key={index}
-                onClick={() => setPost(index)}
-                src={itens.thumbnailUrl}
-                alt="imagens do mini model"
-              />
-            ))}
+            <userContext.Provider value={[album, setAlbum]}>
+              {album.map((itens, index) => (
+                <img
+                  key={index}
+                  onClick={() => setPost(index)}
+                  src={itens.thumbnailUrl}
+                  alt="imagens do mini model"
+                />
+              ))}
+            </userContext.Provider>
           </div>
         </section>
       </section>
