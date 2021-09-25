@@ -11,7 +11,10 @@ function Main() {
   useEffect(() => {
     axios
       .get("https://my-json-server.typicode.com/Everton-Afonso/db/album")
-      .then((response) => setAlbum(response.data));
+      .then((response) => setAlbum(response.data))
+      .catch((error) => {
+        alert(`Ops! ocorreu um erro: ${error}`);
+      });
   }, []);
 
   return (
