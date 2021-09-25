@@ -20,7 +20,19 @@ function Main() {
   return (
     <main className="main-conteiner">
       <section className="main-content">
-        
+        <section className="main-text">
+          <h1>{album[post]?.title}</h1>
+
+          <a
+            href="https://www.corebiz.ag/pt/"
+            target="_blank"
+            rel="noreferrer"
+            alt="veja mais"
+          >
+            veja mais
+            <img src="assets/arrow.svg" alt="veja mais" />
+          </a>
+        </section>
 
         <section className="model-mini">
           <div>
