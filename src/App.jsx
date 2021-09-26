@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOMServer from 'react-dom/server';
 
 import Header from "./components/Header";
 import Main from "./components/Main";
@@ -16,7 +15,5 @@ function App() {
     </>
   );
 }
-
-ReactDOMServer.renderToString(<App />);
 
 export default App;

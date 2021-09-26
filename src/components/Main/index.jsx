@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 import api from "../../services/api";
+import PostImg from "../PostImg";
+import Title from "../Title";
 
 import "./styles.css";
 
@@ -21,7 +23,7 @@ function Main() {
     <main className="main-conteiner">
       <section className="main-content">
         <section className="main-text">
-          <h2>{album[post]?.title}</h2>
+          {<Title title={album[post]?.title} />}
           <a
             href="https://www.corebiz.ag/pt/"
             target="_blank"
@@ -34,9 +36,7 @@ function Main() {
         </section>
 
         <section className="model">
-          <div>
-            <img src={album[post]?.url} alt="imagens do model" />
-          </div>
+          {<PostImg url={album[post]?.url} />}
         </section>
 
         <section className="model-mini">
