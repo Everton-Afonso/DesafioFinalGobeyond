@@ -8,7 +8,7 @@
     />
   </a>
 
-  <p>Desenvolver um layout proposto pelo time da `Corebiz` para mostrar os conhecimentos adiquirios durante o GoBetond.</p>
+  <p>Desenvolver um layout proposto pelo time da Corebiz para mostrar os conhecimentos adiquirios durante o GoBetond.</p>
 
   <br />
 
